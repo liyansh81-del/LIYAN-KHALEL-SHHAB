@@ -18,4 +18,4 @@ Without the `.env` deny rule, Claude could read real secrets such as database UR
 
 - `npm test` passes (4/4) and `npm run lint` is clean with these files added.
 - `.claude/settings.json` is valid JSON with allow, ask and deny rules.
-- `/memory` and `/permissions`: in a fresh `claude` session in this repo, `/memory` should list `CLAUDE.md` as loaded and `/permissions` should show the allow (`npm test`, `npm run lint`), ask (`git push`) and deny (`.env` reads, force-push) rules. Asking "How do I run the tests here?" should answer `npm test` straight from `CLAUDE.md`.
+- Ran `claude --version` (2.1.316). In a fresh session, `/memory` listed `./CLAUDE.md` as loaded project instructions, and `/permissions` showed allow `npm test` / `npm run lint`, ask `git push`, and deny `.env` reads and force-push.
